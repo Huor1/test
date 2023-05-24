@@ -1,0 +1,9 @@
+/////////Push na gita///////
+
+git init
+git add .
+git commit -m " słowa"
+git push
+
+/////Pull z gita////
+git pull
