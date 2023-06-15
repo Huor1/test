@@ -1,0 +1,38 @@
+#Jezyki {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+#Rejestracja{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+#Dane_uzytkownika{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.title { 
+    
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    left: 10%;
+    
+}
+body {
+
+    background-image: url('zdj.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial;
+    color: rgb(0, 0, 0);    
+    background-color: aliceblue;
+    
+}
