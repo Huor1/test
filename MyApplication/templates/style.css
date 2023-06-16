@@ -2,19 +2,65 @@
     position: absolute;
     top: 5%;
     right: 5%;
-  }
-#Rejestracja{
+}
+
+#Rejestracja {
     position: absolute;
     top: 5%;
+    right: 5%;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    display: inline-block; width: 50%; padding: 0;
+    margin: 0;
+    
+}
+#Rejestracja_napis{
+    margin-right: 0%;
+    size: 50%;
+}
+#login-form {
+    position: absolute;
+    top: 8%;
     right: 10%;
-  }
-#Dane_uzytkownika{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+#login-form.open {
+    max-height: 100px; /* Przykładowa wartość */
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    margin-right: 10px;
+}
+
+#Dane_uzytkownika {
     position: absolute;
     top: 5%;
     left: 5%;
 }
-.title { 
-    
+
+#Wersja_programu {
+    position: absolute;
+    top: 95%;
+    left: 5%;
+}
+
+#Autorzy {
+    position: absolute;
+    top: 95%;
+    right: 5%;
+}
+
+.title {
     text-shadow: 0 0 3px rgb(255, 255, 255);
     text-align: center;
     margin-right: auto;
@@ -23,16 +69,15 @@
     top: 10%;
     right: 10%;
     left: 10%;
-    
 }
-body {
 
-    background-image: url('zdj.jpg');
+body {
+    background-image: url('zdj1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
     background-attachment: fixed;
     font-family: Arial;
-    color: rgb(0, 0, 0);    
+    color: rgb(0, 0, 0);
     background-color: aliceblue;
-    
 }

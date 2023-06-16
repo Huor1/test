@@ -1,29 +1,42 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Prognozorator 3000 </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div class="Pasek_opcji">
-                <span id="Rejestracja">Rejestracja</span>
-                <span id="Jezyki">PL</span>
-                <span id="Dane_uzytkownika">Dane użytkownika</span>
-                
+<head>
+    <title>Matthis pretium forecasting</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="Pasek_opcji">
+            <span id="Dane_uzytkownika">Dane użytkownika</span>
+            <span id="Rejestracja" onclick="toggleForm()" >
+                <img id="Rejestracja_napis" src="Rejestracja.png" alt="Rejestracja" style="display: block; width: 30%; margin:0; padding: 0;">
+              </span><!--
+            -->
+            <span id="Jezyki">PL</span>
+            <div id="login-form" class="closed">
+                <div class="form-row">
+                    <label for="username">Login:</label>
+                    <input type="text" id="username" placeholder="Login">
+                </div>
+                <div class="form-row">
+                    <label for="password">Hasło:</label>
+                    <input type="password" id="password" placeholder="Hasło">
+                </div>
             </div>
-        </header> 
-        <section>
-            <div class="title">
-                <h1> Prognozowanie cen nieruchomości </h1>
-                
-            </div>
-        </section>
-        <section>
-            <div class="pierwsze_info">
-                
-        
-        </section>
-    </body>
+        </div>
+    </header>
+    <section>
+        <div class="title">
+            <h1>Prognozowanie cen nieruchomości</h1>
+        </div>
+    </section>
+    <section>
+        <div class="Dolne_info">
+            <span id="Wersja_programu">Wersja programu</span>
+            <span id="Autorzy">Autorzy</span>
+        </div>
+    </section>
+</body>
 </html>
