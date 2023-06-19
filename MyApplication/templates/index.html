@@ -4,17 +4,16 @@
 <head>
     <title>Matthis pretium forecasting</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="Pasek_opcji">
             <span id="Dane_uzytkownika">Dane użytkownika</span>
-            <span id="Rejestracja" onclick="toggleForm()" >
-                <img id="Rejestracja_napis" src="Rejestracja.png" alt="Rejestracja" style="display: block; width: 30%; margin:0; padding: 0;">
-              </span><!--
-            -->
-            <span id="Jezyki">PL</span>
+            <span id="Rejestracja" onclick="toggleForm()">
+                <img id="Rejestracja_napis" src="Rejestracja.png" alt="Rejestracja">
+            </span>
             <div id="login-form" class="closed">
                 <div class="form-row">
                     <label for="username">Login:</label>
@@ -24,6 +23,20 @@
                     <label for="password">Hasło:</label>
                     <input type="password" id="password" placeholder="Hasło">
                 </div>
+                <div class="form-row">
+                    <div class="form-actions">
+                        <button id="login-button">Zaloguj</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flags">
+                <div id="flag1" class="flag-item">
+                  <img src="PL_flag.svg.png" alt="Flag 1">
+                </div>
+                <div id="flag2" class="flag-item" >
+                  <img src="UK_flag.png" alt="Flag 2">
+                </div>
+                
             </div>
         </div>
     </header>
@@ -33,10 +46,26 @@
         </div>
     </section>
     <section>
-        <div class="Dolne_info">
-            <span id="Wersja_programu">Wersja programu</span>
-            <span id="Autorzy">Autorzy</span>
-        </div>
+        <div class="Prognozowanie-obszar">
+            <div class="powierzchnia-layout">
+              <span class="powierzchnia-tekst">Powierzchnia:</span>
+              <input type="number" class="powierzchnia-input" placeholder="m^2">
+            </div>
+            <div class="prostokatne-pole">
+              <span class="napis">Prognozowana cena:</span>
+            </div>
+          </div>
     </section>
+    <footer>
+        <div class="Pasek_dolny">
+            <div class="Pasek_dolny_lewy">
+                <span id="Wersja_programu">Wersja programu: Beta 0.98.3</span>
+            </div>
+            <div class="Pasek_dolny_prawy">
+                <span id="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
+            </div>
+        </div>
+    </footer>
+    <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
 </body>
 </html>

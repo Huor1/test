@@ -1,18 +1,61 @@
-#Jezyki {
-    position: absolute;
-    top: 5%;
-    right: 5%;
+.Pasek_opcji {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, #303036, #e4dcc6);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1999;
+}
+.Pasek_dolny {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, #333, #666);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 9999;
+}
+.Pasek_dolny_lewy,
+.Pasek_dolny_prawy {
+    display: flex;
+    align-items: center;
+}
+
+.flags {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Przesuń elementy w prawo */
+    padding-right: 10px; /* Dodaj odstęp po prawej stronie */
+}
+
+.flag-item {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+.flag-item.active {
+    display: block;
 }
 
 #Rejestracja {
     position: absolute;
-    top: 5%;
+    top: 2%;
     right: 5%;
     cursor: pointer;
     color: blue;
     text-decoration: underline;
-    display: inline-block; width: 50%; padding: 0;
-    margin: 0;
+    
     
 }
 #Rejestracja_napis{
@@ -21,11 +64,12 @@
 }
 #login-form {
     position: absolute;
-    top: 8%;
-    right: 10%;
+    top: 100%;
+    right: 3%;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
+    z-index:2;
 }
 
 #login-form.open {
@@ -41,34 +85,49 @@
 .form-row label {
     margin-right: 10px;
 }
-
+#login-button {
+    
+    margin-top: 5px; /* Dodany margines dla przycisku */
+}
+.form-actions {
+    margin-left: 170px;
+}
 #Dane_uzytkownika {
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: Impact;
     position: absolute;
     top: 5%;
     left: 5%;
 }
 
 #Wersja_programu {
-    position: absolute;
-    top: 95%;
-    left: 5%;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 #Autorzy {
-    position: absolute;
-    top: 95%;
-    right: 5%;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .title {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: Impact;
     text-shadow: 0 0 3px rgb(255, 255, 255);
     text-align: center;
     margin-right: auto;
     margin-left: auto;
     position: absolute;
-    top: 10%;
+    top: 6%;
     right: 10%;
     left: 10%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -81,3 +140,62 @@ body {
     color: rgb(0, 0, 0);
     background-color: aliceblue;
 }
+.Pasek_opcji--dolny {
+    position: fixed;
+    bottom: 0;
+    background-image: linear-gradient(to top, #333, #555);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.Prognozowanie-obszar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 700px;
+    margin: 10% auto;
+    border: 1px solid black;
+  }
+  
+  .powierzchnia-layout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 85%;
+  }
+  
+  .powierzchnia-tekst {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .powierzchnia-input {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #333;
+    padding: 5px;
+  }
+  
+  .prostokatne-pole {
+    width: 100%;
+    height: 100px;
+    background-color: #a9e20e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .napis {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+  }
