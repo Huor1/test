@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +10,9 @@
     <header>
         <div class="Pasek_opcji">
             <span id="Dane_uzytkownika">Dane użytkownika</span>
-            <span id="Rejestracja" onclick="toggleForm()">
+            <span id="Rejestracja">
                 <img id="Rejestracja_napis" src="Rejestracja.png" alt="Rejestracja">
-            </span>
+              </span>
             <div id="login-form" class="closed">
                 <div class="form-row">
                     <label for="username">Login:</label>
@@ -29,15 +28,19 @@
                     </div>
                 </div>
             </div>
-            <div class="flags">
-                <div id="flag1" class="flag-item">
-                  <img src="PL_flag.svg.png" alt="Flag 1">
+            <div class="options">
+                <div class="flags">
+                  <div id="flag1" class="flag-item">
+                    <img src="PL_flag.svg.png" alt="Flag 1">
+                  </div>
+                  <div id="flag2" class="flag-item">
+                    <img src="UK_flag.png" alt="Flag 2">
+                  </div>
+                  <div id="flag3" class="flag-item">
+                    <img src="SPQR_flag.png" alt="Flag 3">
+                  </div>
                 </div>
-                <div id="flag2" class="flag-item" >
-                  <img src="UK_flag.png" alt="Flag 2">
-                </div>
-                
-            </div>
+              </div>
         </div>
     </header>
     <section>
@@ -47,14 +50,19 @@
     </section>
     <section>
         <div class="Prognozowanie-obszar">
-            <div class="powierzchnia-layout">
-              <span class="powierzchnia-tekst">Powierzchnia:</span>
-              <input type="number" class="powierzchnia-input" placeholder="m^2">
-            </div>
-            <div class="prostokatne-pole">
-              <span class="napis">Prognozowana cena:</span>
-            </div>
-          </div>
+            <div class="wrapper">
+                <div class="powierzchnia-tekst tekst">Powierzchnia:</div>
+                <input type="number" class="powierzchnia-input input" placeholder="Wpisz liczbę" />
+              </div>
+              <div class="wrapper">
+                <div class="pokoje-tekst tekst">Pokoje:</div>
+                <input type="number" class="pokoje-input input" placeholder="Wpisz liczbę" />
+              </div>
+              <div class="prostokatne-pole">
+               <h1>Prognozowana cena</h1>
+              </div>
+        </div>
+        <img id="Prawe_zdjecie" src="Palac.jpg" alt="Palac" class="palac-image" />
     </section>
     <footer>
         <div class="Pasek_dolny">
