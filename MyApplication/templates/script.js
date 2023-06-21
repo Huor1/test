@@ -2,28 +2,62 @@ $(document).ready(function() {
     var programVersion = " Beta 0.098.3"; // Numer programu
     
     function toggleForm() {
-      var form = document.getElementById("login-form");
-  
-      if (form.classList.contains("closed")) {
-        form.classList.remove("closed");
-      } else {
-        form.classList.add("closed");
+        var form = document.getElementById("login-form");
+      
+        if (form.classList.contains("closed")) {
+          form.classList.remove("closed");
+          form.style.maxHeight = form.scrollHeight + "px"; // Ustaw pełną wysokość formularza
+        } else {
+          form.style.maxHeight = "0"; // Ustaw wysokość na 0
+          form.classList.add("closed");
+        }
       }
-    }
-  
-    // Dodaj obsługę zdarzenia kliknięcia dla przycisku rejestracji
-    var rejestracjaButton = document.getElementById("Rejestracja");
-    rejestracjaButton.addEventListener("click", toggleForm);
-  
-    var images = ["zdj1.jpg", "zdj2.jpg", "zdj3.jpg"];
+      // Dodaj klasę "closed" na początku dla formularza logowania
+      var loginForm = document.getElementById("login-form");
+      loginForm.classList.add("closed");
+      // Dodaj obsługę zdarzenia kliknięcia dla przycisku rejestracji
+      var rejestracjaButton = document.getElementById("Rejestracja");
+      rejestracjaButton.addEventListener("click", toggleForm);
+      
+
+
+   var imagesUKPL = ["zdj1.jpg", "zdj2.jpg", "zdj3.jpg"];
+    var imagesSPQR = ["zdj4.jpg", "zdj5.jpg", "zdj6.jpg"];
     var currentImageIndex = 0;
+    var clickedFlag = $("#flag1"); // Domyślnie ustawiona flaga UK
+
+
+function changeBackgroundImage() {
+  var images = [];
+
+  if (clickedFlag.attr("id") === "flag1" || clickedFlag.attr("id") === "flag2") {
+    // Jeśli kliknięto flagę UK lub PL, użyj zdjęć dla UK i PL
+    images = imagesUKPL;
+  } else if (clickedFlag.attr("id") === "flag3") {
+    // Jeśli kliknięto flagę SPQR, użyj zdjęć dla SPQR
+    images = imagesSPQR;
+  }
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  var imageUrl = images[currentImageIndex];
+  document.body.style.backgroundImage = "url('" + imageUrl + "')";
+}
+
+function startImageRotation() {
+  setInterval(changeBackgroundImage, 5000); // Zmieniaj obraz co 5 sekund
+}
+startImageRotation(); // Rozpoczęcie automatycznej rotacji obrazów
+// Wywołaj funkcję startImageRotation() po kliknięciu na flagę
+$("#flag1, #flag2, #flag3").click(function() {
+  clickedFlag = $(this);
+  changeBackgroundImage(); // Natychmiastowa zmiana obrazu po kliknięciu na flagę
   
-    function changeBackgroundImage() {
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-      var imageUrl = images[currentImageIndex];
-      document.body.style.backgroundImage = "url('" + imageUrl + "')";
-    }
-    setInterval(changeBackgroundImage, 5000); // Zmieniaj obraz co 5 sekund
+});
+
+    
+    
+
+    
     console.log("script.js loaded"); // Dodanie console.log()
   
     // Ukryj wszystkie flagi, oprócz flagi UK
@@ -36,27 +70,59 @@ $(document).ready(function() {
       if (language === "pl") {
         translations = {
           "Zaloguj": "Zaloguj",
-          "Dane_uzytkownika": "Dane użytkownika",
-          "Wersja_programu": "Wersja programu"+programVersion,
-          "Autorzy": "Autorzy Jakub Kołodziej i Piotr Wieczorek"
+          'label[for="username"]': "Login:",
+          'label[for="password"]': "Hasło:",
+          ".Dane_uzytkownika": "Dane użytkownika",
+          ".Wersja_programu": "Wersja programu"+programVersion,
+          ".Autorzy": "Autorzy Jakub Kołodziej i Piotr Wieczorek",
+          ".title": "Prognozowanie cen nieruchomości",
+          ".powierzchnia-tekst": "Powierzchnia:",
+          ".pokoje-tekst": "Pokoje:",
+          ".prognozowana-cena": "Prognozowana cena"
+          
+          
           // Dodaj inne tłumaczenia dla polskiego tutaj
         };
+         // Zmiana obrazu na "Palac.jpg"
+        $("#zdjecie-prawo").attr("src", "Palac.jpg");
       } else if (language === "en") {
         translations = {
           "Zaloguj": "Login",
-          "Dane_uzytkownika": "User Data",
-          "Wersja_programu": "Program version"+programVersion,
-          "Autorzy": "Authors Jakub Kołodziej i Piotr Wieczorek"
+          'label[for="username"]': "Username:",
+          'label[for="password"]': "Password:",
+          ".Dane_uzytkownika": "User Data",
+          ".Wersja_programu": "Program version"+programVersion,
+          ".Autorzy": "Authors Jakub Kołodziej i Piotr Wieczorek",
+          ".title": "Real estate price forecasting",
+          ".pokoje-tekst": "Rooms:",
+          ".powierzchnia-tekst": "Properties:",
+          ".prognozowana-cena": "Forecasted Price"
           // Dodaj inne tłumaczenia dla angielskiego tutaj
         };
-        var selectedFlag = $(".flag-item.open");
-        var imageName = selectedFlag.data("image");
-        $("#zdjecie").attr("src", imageName);
+        // Zmiana obrazu na "BigBen.jpg"
+    $("#zdjecie-prawo").attr("src", "BigBen.jpg");
       }
-  
+      else if (language === "spqr") {
+        translations = {
+          "Zaloguj": "Login",
+          'label[for="username"]': "Loginus:",
+          'label[for="password"]': "Password:",
+          ".Dane_uzytkownika": "User Data",
+          ".Wersja_programu": "Version program"+programVersion,
+          ".Autorzy": "Auctores Iacobus Wheelwright et Petrus Vesperi",
+          ".title": "Projecting verus praedium prices",
+          ".pokoje-tekst": "Rooms:",
+          ".powierzchnia-tekst": "Area:",
+          ".prognozowana-cena": "Data pretium"
+          // Dodaj inne tłumaczenia dla angielskiego tutaj
+        };
+        // Zmiana obrazu na "BigBen.jpg"
+    $("#zdjecie-prawo").attr("src", "roman_centurion.jpg");
+      }
+      
       for (var key in translations) {
         if (translations.hasOwnProperty(key)) {
-          $("#" + key).text(translations[key]);
+          $(key).html(translations[key]);
         }
       }
     }
@@ -86,10 +152,13 @@ $(document).ready(function() {
       if (clickedFlag.attr("id") === "flag1") {
         // Jeśli kliknięto flagę Polski, tłumacz na język polski
         translateElements("pl");
-      } else {
-        // Jeśli kliknięto inną flagę, tłumacz na język angielski
+      } else if (clickedFlag.attr("id") === "flag2") {
+        // Jeśli kliknięto flagę UK, tłumacz na język angielski
         translateElements("en");
-      }
+      } else if (clickedFlag.attr("id") === "flag3") {
+        // Jeśli kliknięto flagę SPQR, tłumacz na język SPQR
+        translateElements("spqr");
+      } 
     });
   
     // Po zakończeniu animacji slideUp
@@ -109,8 +178,10 @@ $(document).ready(function() {
   
       if (username && password) {
         // Jeśli oba pola są wypełnione
-        $("#Dane_uzytkownika").text(username); // Zaktualizuj treść elementu Dane_uzytkownika
+        $(".Dane_uzytkownika").text(username); // Zaktualizuj treść elementu Dane_uzytkownika
         $("#login-form").removeClass("open"); // Zamknij formularz logowania
+        $("#username").val(""); // Wyczyść pole loginu
+        $("#password").val(""); // Wyczyść pole hasła
       }
     });
   

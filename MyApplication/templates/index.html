@@ -9,18 +9,18 @@
 <body>
     <header>
         <div class="Pasek_opcji">
-            <span id="Dane_uzytkownika">Dane użytkownika</span>
+            <span class="Dane_uzytkownika">Dane użytkownika</span>
             <span id="Rejestracja">
                 <img id="Rejestracja_napis" src="Rejestracja.png" alt="Rejestracja">
               </span>
             <div id="login-form" class="closed">
                 <div class="form-row">
                     <label for="username">Login:</label>
-                    <input type="text" id="username" placeholder="Login">
+                    <input type="text" id="username" placeholder="">
                 </div>
                 <div class="form-row">
                     <label for="password">Hasło:</label>
-                    <input type="password" id="password" placeholder="Hasło">
+                    <input type="password" id="password" placeholder="">
                 </div>
                 <div class="form-row">
                     <div class="form-actions">
@@ -28,12 +28,13 @@
                     </div>
                 </div>
             </div>
+            
             <div class="options">
                 <div class="flags">
-                  <div id="flag1" class="flag-item">
+                  <div id="flag1" class="flag-item" data-image="Palac.jpg">
                     <img src="PL_flag.svg.png" alt="Flag 1">
                   </div>
-                  <div id="flag2" class="flag-item">
+                  <div id="flag2" class="flag-item" data-image="BigBen.jpg">
                     <img src="UK_flag.png" alt="Flag 2">
                   </div>
                   <div id="flag3" class="flag-item">
@@ -44,33 +45,32 @@
         </div>
     </header>
     <section>
-        <div class="title">
-            <h1>Prognozowanie cen nieruchomości</h1>
-        </div>
+        <div class="title">Prognozowanie</div>
+        
     </section>
     <section>
         <div class="Prognozowanie-obszar">
             <div class="wrapper">
-                <div class="powierzchnia-tekst tekst">Powierzchnia:</div>
-                <input type="number" class="powierzchnia-input input" placeholder="Wpisz liczbę" />
-              </div>
-              <div class="wrapper">
-                <div class="pokoje-tekst tekst">Pokoje:</div>
-                <input type="number" class="pokoje-input input" placeholder="Wpisz liczbę" />
-              </div>
-              <div class="prostokatne-pole">
-               <h1>Prognozowana cena</h1>
-              </div>
-        </div>
-        <img id="Prawe_zdjecie" src="Palac.jpg" alt="Palac" class="palac-image" />
+              <div class="powierzchnia-tekst tekst">Powierzchnia:</div>
+              <input type="number" class="powierzchnia-input input" placeholder="Wpisz liczbę" />
+            </div>
+            <div class="wrapper">
+              <div class="pokoje-tekst tekst">Pokoje:</div>
+              <input type="number" class="pokoje-input input" placeholder="Wpisz liczbę" />
+            </div>
+            <div class="prostokatne-pole">
+              <h1 class="prognozowana-cena">Prognozowana cena</h1>
+            </div>
+          </div>
+        <img id="zdjecie-prawo" src="Palac.jpg" alt="Zdjęcie-prawo" class="palac-image" >
     </section>
     <footer>
         <div class="Pasek_dolny">
             <div class="Pasek_dolny_lewy">
-                <span id="Wersja_programu">Wersja programu: Beta 0.98.3</span>
+                <span class="Wersja_programu">Wersja programu: Beta 0.98.3</span>
             </div>
             <div class="Pasek_dolny_prawy">
-                <span id="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
+                <span class="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
             </div>
         </div>
     </footer>

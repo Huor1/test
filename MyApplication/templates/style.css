@@ -56,6 +56,7 @@
 
 #login-form.open {
     max-height: 100px; /* Przykładowa wartość */
+    
 }
 
 .form-row {
@@ -74,7 +75,7 @@
 .form-actions {
     margin-left: 170px;
 }
-#Dane_uzytkownika {
+.Dane_uzytkownika {
     color: #ffffff;
     font-weight: bolder;
     font-size: 1.5rem;
@@ -84,13 +85,13 @@
     left: 5%;
 }
 
-#Wersja_programu {
+.Wersja_programu {
     color: #fff;
     margin: 0;
     padding: 0;
 }
 
-#Autorzy {
+.Autorzy {
     color: #fff;
     margin: 0;
     padding: 0;
@@ -98,14 +99,14 @@
 
 .title {
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-family: Impact;
     text-shadow: 0 0 3px rgb(255, 255, 255);
     text-align: center;
     margin-right: auto;
     margin-left: auto;
     position: absolute;
-    top: 6%;
+    top: 10%;
     right: 10%;
     left: 10%;
     margin: 0;
@@ -175,7 +176,7 @@ body {
     color: #aa10be;
     font-size: 16px;
     font-weight: bold;
-    margin-left: 27%;
+    margin-left: 0%;
     padding: 11px; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
   }
   .prostokatne-pole {
