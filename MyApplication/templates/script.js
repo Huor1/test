@@ -95,7 +95,7 @@ $("#flag1, #flag2, #flag3").click(function() {
           ".Autorzy": "Authors Jakub Kołodziej i Piotr Wieczorek",
           ".title": "Real estate price forecasting",
           ".pokoje-tekst": "Rooms:",
-          ".powierzchnia-tekst": "Properties:",
+          ".powierzchnia-tekst": "Area:",
           ".prognozowana-cena": "Forecasted Price"
           // Dodaj inne tłumaczenia dla angielskiego tutaj
         };
@@ -195,5 +195,36 @@ $("#flag1, #flag2, #flag3").click(function() {
         $('.flag-item').removeClass('open');
       }
     });
-  });
   
+    
+  // Pobierz element audio
+  var audio = document.getElementById("background-music");
+
+  // Funkcja do odtwarzania muzyki
+  function playMusic() {
+    audio.play();
+  }
+
+  // Funkcja do zatrzymywania muzyki
+  function stopMusic() {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
+  // Dodaj obsługę zdarzenia kliknięcia na flagę SPQR
+  $("#flag3").click(function() {
+    // Uruchom odtwarzanie muzyki po bezpośredniej interakcji użytkownika
+    playMusic();
+  });
+
+  // Dodaj obsługę zdarzenia kliknięcia na flagę PL i UK
+  $("#flag1, #flag2").click(function() {
+    // Zatrzymaj odtwarzanie muzyki po zmianie tłumaczenia na PL lub UK
+    stopMusic();
+  });
+
+  // Odtwórz muzykę po załadowaniu strony, jeśli flaga SPQR jest już wybrana
+  if ($("#flag3").hasClass("open")) {
+    playMusic();
+  }
+});

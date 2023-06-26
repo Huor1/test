@@ -1,234 +1,96 @@
-.Pasek_opcji {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(to right, #303036, #e4dcc6);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1999;
-}
-.Pasek_dolny {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 30px;
-    background: linear-gradient(to bottom, #333, #666);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    z-index: 9999;
-}
-.Pasek_dolny_lewy,
-.Pasek_dolny_prawy {
-    display: flex;
-    align-items: center;
-}
-
-
-#Rejestracja {
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
-    
-    
-}
-#Rejestracja_napis{
-    margin-right: 0%;
-    size: 50%;
-}
-#login-form {
-    position: absolute;
-    top: 100%;
-    right: 9%;
-    
-    max-height: 0;
-    transition: max-height 0.3s ease-in-out;
-    z-index:2;
-}
-
-#login-form.open {
-    max-height: 100px; /* Przykładowa wartość */
-    
-}
-
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.form-row label {
-    margin-right: 10px;
-}
-#login-button {
-    
-    margin-top: 5px; /* Dodany margines dla przycisku */
-}
-.form-actions {
-    margin-left: 170px;
-}
-.Dane_uzytkownika {
-    color: #ffffff;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    font-family: Impact;
-    position: absolute;
-    top: 7%;
-    left: 5%;
-}
-
-.Wersja_programu {
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
-
-.Autorzy {
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
 
 .title {
-    font-weight: bolder;
-    font-size: 2.5rem;
-    font-family: Impact;
-    text-shadow: 0 0 3px rgb(255, 255, 255);
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    left: 10%;
-    margin: 0;
-    padding: 0;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  font-family: Impact;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  left: 10%;
+  
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-image: url('zdj1.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    transition: background-image 0.5s ease-in-out;
-    background-attachment: fixed;
-    font-family: Arial;
-    color: rgb(0, 0, 0);
-    background-color: aliceblue;
-}
-.Pasek_opcji--dolny {
-    position: fixed;
-    bottom: 0;
-    background-image: linear-gradient(to top, #333, #555);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    color: #fff;
+  background-image: url('zdj1.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  background-attachment: fixed;
+  font-family: Arial;
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
 }
 
+
 .Prognozowanie-obszar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 70%;
-    height: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-  }
-  
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .powierzchnia-tekst {
-    background-image: linear-gradient(to top, #d8c6c6, #949090);
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+color: #aa10be;
+font-size: 16px;
+font-weight: bold;
+margin-right: 0px;
+padding: 11px; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+.input {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #333;
+  padding: 5px;
+}
+.pokoje-tekst {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
   color: #aa10be;
   font-size: 16px;
   font-weight: bold;
-  margin-right: 0px;
+  margin-left: 0%;
   padding: 11px; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
-  }
+}
+.prostokatne-pole {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #a9e20e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0; /* Przyleganie do dolnej krawędzi kontenera rodzica */
   
-  .input {
-    width: 100px;
-    height: 30px;
-    border: 1px solid #333;
-    padding: 5px;
-  }
-  .pokoje-tekst {
-    background-image: linear-gradient(to top, #d8c6c6, #949090);
-    color: #aa10be;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 0%;
-    padding: 11px; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
-  }
-  .prostokatne-pole {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-color: #a9e20e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0; /* Przyleganie do dolnej krawędzi kontenera rodzica */
-    
-  }
-
-  .napis {
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .options {
-    position: absolute;
-    top: 8px;
-    right: 20px;
-  }
-  
-  .flags {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .flag-item {
-    margin-bottom: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: max-height 0.3s ease; /* Dodaj animację max-height */
-  }
-  
-  .flag-item img {
-    width: 50px;
-  }
-  
-  .flag-item.open {
-    max-height: 100px; /* Ustaw maksymalną wysokość, aby uzyskać płynne rozwijanie */
-  }
-  .palac-image {
-    width: 280px; /* Dostosuj szerokość obrazka według potrzeb */
-    height: 700px; /* Dostosuj wysokość obrazka według potrzeb */
-    position: absolute;
-    top: 15.45%;
-    right: 0.5%;
-  }
-  .closed {
-    display: none;
-  }
+}
+.palac-image {
+  width: 15%; /* Dostosuj szerokość obrazka według potrzeb */
+  height: 70%; /* Dostosuj wysokość obrazka według potrzeb */
+  position: absolute;
+  top: 25.45%;
+  right: 0.5%;
+}
+.closed {
+  display: none;
+}
