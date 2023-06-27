@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var programVersion = " Beta 0.098.3"; // Numer programu
-    
+    /*
     function toggleForm() {
         var form = document.getElementById("login-form");
       
@@ -18,7 +18,7 @@ $(document).ready(function() {
       // Dodaj obsługę zdarzenia kliknięcia dla przycisku rejestracji
       var rejestracjaButton = document.getElementById("Rejestracja");
       rejestracjaButton.addEventListener("click", toggleForm);
-      
+      */
 
 
    var imagesUKPL = ["zdj1.jpg", "zdj2.jpg", "zdj3.jpg"];
