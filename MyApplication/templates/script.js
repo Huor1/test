@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function() {
   };
 });
 $(document).ready(function() {
-    var programVersion = " Beta 0.098.3"; // Numer programu
+    var programVersion = " Beta 0.19.3"; // Numer programu
     /*
     function toggleForm() {
         var form = document.getElementById("login-form");
@@ -85,7 +85,11 @@ $("#flag1, #flag2, #flag3").click(function() {
           ".title": "Prognozowanie cen nieruchomości",
           ".powierzchnia-tekst": "Powierzchnia:",
           ".pokoje-tekst": "Pokoje:",
-          ".prognozowana-cena": "Prognozowana cena"
+          ".prognozowana-cena": "Prognozowana cena",
+          ".active": "Strona główna",
+          ".Funkcja1": "Funkcja 1",
+          ".Funkcja2": "Funkcja 2 ",
+          ".Login": "Login",
           
           
           // Dodaj inne tłumaczenia dla polskiego tutaj
@@ -103,7 +107,11 @@ $("#flag1, #flag2, #flag3").click(function() {
           ".title": "Real estate price forecasting",
           ".pokoje-tekst": "Rooms:",
           ".powierzchnia-tekst": "Area:",
-          ".prognozowana-cena": "Forecasted Price"
+          ".prognozowana-cena": "Forecasted Price",
+          ".active": "Home",
+        ".Funkcja1": "Function 1",
+        ".Funkcja2": "Function 2 ",
+        ".Login": "Login",
           // Dodaj inne tłumaczenia dla angielskiego tutaj
         };
         // Zmiana obrazu na "BigBen.jpg"
@@ -120,7 +128,12 @@ $("#flag1, #flag2, #flag3").click(function() {
           ".title": "Projecting verus praedium prices",
           ".pokoje-tekst": "Rooms:",
           ".powierzchnia-tekst": "Area:",
-          ".prognozowana-cena": "Data pretium"
+          ".prognozowana-cena": "Data pretium",
+          ".active": "Home",
+        ".Funkcja1": "Officium 1",
+        ".Funkcja2": "Officium 2 ",
+        ".Login": "Loginus",
+
           // Dodaj inne tłumaczenia dla angielskiego tutaj
         };
         // Zmiana obrazu na "BigBen.jpg"

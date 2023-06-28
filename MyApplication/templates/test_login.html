@@ -14,6 +14,7 @@
     
 
 </head>
+<!--Odtąd kopiuj pasek nawigacyjny do każdego htmla-->
 <body>
     <div class="navbar">
         <div class="Prognostica">Adeptus Prognostica</div>
@@ -28,13 +29,16 @@
                     <a href="index.html" class="active">Home</a>
                 </li>
                 <li>
-                    <a href="">Funkcja 1</a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="Funkcja1">Funkcja 1</a>
                 </li>
                 <li>
-                    <a href="">Funkcja 2</a>
+                    <a href="https://www.youtube.com/watch?v=WdlIKy2lJ_g" class="Funkcja2">Funkcja 2</a>
                 </li>
                 <li>
-                    <a href="test_login.html">Login</a>
+                    <a href="test_login.html" class="Login">Login</a>
+                </li>
+                <li>
+                    <a href="" class="About">About Us</a>
                 </li>
                 <li>
                         <div id="flag1" class="flag-item" >
@@ -52,24 +56,25 @@
 
 
     </div>
+    <!--Aż dotąd kopiowanie paska nawigacyjnego-->
 <div class="container">
     <div class="form-box">
         <h1 id="title">Sign Up</h1>
         <form>
             <div class="input-group">
                 <div class="input-field" id="nameField">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Name">
+                    <i class="fa-solid fa-user-ninja"></i>
+                    <input type="text" class="Name" placeholder="Name">
                 </div>
 
                 <div class="input-field">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Email">
+                    <input type="email" class="Email" placeholder="Email">
                 </div>
 
                 <div class="input-field">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input type="password" class="Password" placeholder="Password">
                 </div>
                 <p>Lost password <a href="#">Click Here!</a></p>
             </div>
@@ -105,7 +110,9 @@ signupBtn.onclick = function(){
 
 }
 
+
 </script>
+<!--ten skrypt i audio tez do paska nawigacyjnego jest potrzebne-->
 <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
 <audio id="background-music" loop>
     <source src="divinitus.mp3" type="audio/mpeg">

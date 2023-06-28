@@ -110,7 +110,7 @@
 
     .nav-bar ul li a{
         margin-bottom: 12px;
-        color: red;
+        color: rgb(0, 225, 255);
     }
 }
 
@@ -176,3 +176,4 @@
     max-height: 1000px;
     opacity: 1;
 }
+
