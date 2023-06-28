@@ -1,3 +1,10 @@
+window.addEventListener("DOMContentLoaded", function() {
+  var hamburger = document.querySelector(".hamburger");
+  hamburger.onclick = function() {
+    var navBar = document.querySelector(".nav-bar");
+    navBar.classList.toggle("active");
+  };
+});
 $(document).ready(function() {
     var programVersion = " Beta 0.098.3"; // Numer programu
     /*
@@ -197,34 +204,47 @@ $("#flag1, #flag2, #flag3").click(function() {
     });
   
     
-  // Pobierz element audio
-  var audio = document.getElementById("background-music");
+ // Pobierz element audio
+var audio = document.getElementById("background-music");
 
-  // Funkcja do odtwarzania muzyki
-  function playMusic() {
-    audio.play();
+// Funkcja do odtwarzania muzyki
+function playMusic() {
+  audio.play();
+}
+
+// Funkcja do zatrzymywania muzyki
+function stopMusic() {
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+// Obsługa zdarzenia kliknięcia na flagę SPQR
+$("#flag3").click(function() {
+  // Uruchom odtwarzanie muzyki po bezpośredniej interakcji użytkownika
+  playMusic();
+});
+
+// Obsługa zdarzenia kliknięcia na flagę PL i UK
+$("#flag1, #flag2").click(function() {
+  // Zatrzymaj odtwarzanie muzyki po zmianie tłumaczenia na PL lub UK
+  stopMusic();
+});
+
+// Obsługa zdarzenia kliknięcia na dokument
+$(document).click(function(event) {
+  var target = $(event.target);
+
+  // Sprawdź, czy kliknięcie było na flagę lub jej obrazek
+  if (!target.hasClass('flag-item') && !target.closest('.flag-item').length) {
+    // Jeśli kliknięcie było gdzieś indziej, zwijaj flagi
+    $('.flag-item').removeClass('open');
   }
+});
 
-  // Funkcja do zatrzymywania muzyki
-  function stopMusic() {
-    audio.pause();
-    audio.currentTime = 0;
-  }
+// Odtwórz muzykę po załadowaniu strony, jeśli flaga SPQR jest już wybrana
+if ($("#flag3").hasClass("open")) {
+  playMusic();
+}
 
-  // Dodaj obsługę zdarzenia kliknięcia na flagę SPQR
-  $("#flag3").click(function() {
-    // Uruchom odtwarzanie muzyki po bezpośredniej interakcji użytkownika
-    playMusic();
-  });
 
-  // Dodaj obsługę zdarzenia kliknięcia na flagę PL i UK
-  $("#flag1, #flag2").click(function() {
-    // Zatrzymaj odtwarzanie muzyki po zmianie tłumaczenia na PL lub UK
-    stopMusic();
-  });
-
-  // Odtwórz muzykę po załadowaniu strony, jeśli flaga SPQR jest już wybrana
-  if ($("#flag3").hasClass("open")) {
-    playMusic();
-  }
 });
